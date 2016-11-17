@@ -14,14 +14,14 @@ window.template = function(id) {
 App.Router = Backbone.Router.extend({
  routes: {
    ''     : 'index',
-   'read' :  'read'
+   'page/:id/suryh' :  'page'
  },
   index: function(){
       console.log('Всем привет!');
 },
 
-  read: function(){
-      console.log('Всем привет это Read!');
+  page: function(){
+      console.log('Всем привет это Page !!');
 }
 });
 
