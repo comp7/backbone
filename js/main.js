@@ -14,7 +14,9 @@ window.template = function(id) {
 App.Router = Backbone.Router.extend({
  routes: {
    ''     : 'index',
-   'page/:id/*simbo' :  'page'
+   'page/:id/*simbo' :  'page',
+   'search/:query'   :   'search',
+   '*other'          :   'default'
  },
   index: function(){
       console.log('Всем привет!');
@@ -23,7 +25,13 @@ App.Router = Backbone.Router.extend({
   page: function(id, simbo){
       //console.log('Всем привет это Page!!');
       console.log(simbo);
-}
+},
+  search: function(query){
+  },
+  default: function(other){
+    alert('Хмммм' + other );
+  }
+
 });
 
 new App.Router();
